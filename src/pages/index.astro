@@ -4,6 +4,7 @@ import { getCollection } from "astro:content";
 import Container from "@components/Container.astro";
 import PageLayout from "@layouts/PageLayout.astro";
 import ArrowCard from "@components/ArrowCard.astro";
+import Icon from "@components/Icon.astro";
 import Link from "@components/Link.astro";
 import { dateRange } from "@lib/utils";
 import { SITE, HOME, SOCIALS } from "@consts";
@@ -136,20 +137,14 @@ const work = await Promise.all(
             reach out on social media or send me an email.
           </p>
         </article>
-        <ul class="flex flex-wrap gap-2">
+        <ul class="flex flex-wrap items-center gap-4">
           {SOCIALS.map(SOCIAL => (
-            <li class="flex gap-x-2 text-nowrap">
-              <Link href={SOCIAL.HREF} external aria-label={`${SITE.NAME} on ${SOCIAL.NAME}`}>
-                {SOCIAL.NAME}
+            <li>
+              <Link href={SOCIAL.HREF} external={SOCIAL.NAME !== "mail"} underline={false} aria-label={`${SITE.NAME} on ${SOCIAL.NAME}`}>
+                <Icon name={SOCIAL.NAME} class="size-5" />
               </Link>
-              {"/"}
             </li>
           ))}
-          <li class="line-clamp-1">
-            <Link href={`mailto:${SITE.EMAIL}`} aria-label={`Email ${SITE.NAME}`}>
-              {SITE.EMAIL}
-            </Link>
-          </li>
         </ul>
       </section>
     </div>

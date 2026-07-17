@@ -12,6 +12,6 @@ export type Metadata = {
 };
 
 export type Socials = {
-  NAME: string;
+  NAME: "twitter-x" | "github" | "linkedin" | "mail";
   HREF: string;
 }[];

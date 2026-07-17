@@ -29,16 +29,20 @@ export const PROJECTS: Metadata = {
 };
 
 export const SOCIALS: Socials = [
-  { 
+  {
     NAME: "twitter-x",
     HREF: "https://x.com/OscarGarzon705",
   },
-  { 
+  {
     NAME: "github",
     HREF: "https://github.com/oscar-garzon"
   },
-  { 
+  {
     NAME: "linkedin",
     HREF: "https://www.linkedin.com/in/oscar-garzon/",
+  },
+  {
+    NAME: "mail",
+    HREF: `mailto:${SITE.EMAIL}`,
   }
 ];
