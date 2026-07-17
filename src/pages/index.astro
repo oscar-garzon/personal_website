@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 import Container from "@components/Container.astro";
 import PageLayout from "@layouts/PageLayout.astro";
@@ -6,6 +7,7 @@ import ArrowCard from "@components/ArrowCard.astro";
 import Link from "@components/Link.astro";
 import { dateRange } from "@lib/utils";
 import { SITE, HOME, SOCIALS } from "@consts";
+import profileImage from "@assets/yo_nevado_colima.jpeg";
 
 const blog = (await getCollection("blog"))
   .filter(post => !post.data.draft)
@@ -38,12 +40,23 @@ const work = await Promise.all(
     <div class="space-y-16">
       <section>
         <article class="space-y-4">
+          <Image
+            src={profileImage}
+            alt="Oscar Garzon"
+            width={480}
+            class="animate float-right w-48 sm:w-64 h-auto rounded-lg ml-4 mb-2"
+          />
           <p class="animate">
-            I studied mathematics at UNAM and nowadays work as a Solution Engineer in 
-            Professional Services at Fico. I love to design, understand and build systems. 
+            I like building and understanding systems.
             <br>
             <br>
-            I like to take walks and be curious about the world around me.
+            On the building side, I currently develop systems that ingest and process data, primarily for financial applications. On the understanding side, I'm fascinated by systems of all kinds—urban systems, financial markets, social systems, galaxies, and even the universe itself. 
+            <br>
+            <br>
+            Outside of technology, I enjoy art, especially work that explores patterns, geometry, and mathematical ideas. Escher's work is a great example of the kind of art that inspires me.
+            <br>
+            <br>
+            Outside of work, I enjoy staying active by going to the gym and playing tennis. I'm honestly not very good at tennis, but it's one of my favorite ways to relax and have fun.
           </p>
         </article>
       </section>
