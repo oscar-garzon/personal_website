@@ -6,4 +6,5 @@ dateEnd: "02/02/2024"
 ---
 
 
-Investigated how LLM simulate human behavior using prompt engineering and psychological theories of personality.
+- Conducted research on Large Language Models (LLMs), focusing simulating human behavior through prompt engineering and modeling. 
+- Co-authored the paper “Experimentos en apertura y conscienciamodificando aspectos de personalidad con MML y prompting”. 
